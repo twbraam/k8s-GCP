@@ -1,0 +1,17 @@
+----------------------------------------------------
+Imperative command to redownload docker image:
+
+kubectl set image <object_type>/<object_name> <container_name> = <new image to use>:version2
+----------------------------------------------------
+Creating a secret:
+
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
+----------------------------------------------------
+Helm install on GCP:
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
+
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm install my-nginx stable/nginx-ingress --set rbac.create=true 
