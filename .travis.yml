@@ -18,7 +18,7 @@ before_install:
   - docker build -t twbraam/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true twbraam/docker-react npm run test
+  - docker run -e CI=true twbraam/react-test npm run test
 
 deploy:
   provider: script
